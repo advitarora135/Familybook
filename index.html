@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Family book</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <center>
+        <span>
+            <button id="previous" style="border-color:transparent; background-color: transparent;" onclick="prev()">
+                <h1>◀</h1>
+            </button>
+
+            <img id="book"></span>
+
+        <button id="next" style="border-color:transparent; background-color: transparent;" onclick="next()">
+            <h1>▶</h1>
+        </button>
+
+        <script>
+            var img_array = [
+                "https://www.kindpng.com/picc/m/107-1076698_boss-baby-janice-templeton-porn-hd-png-download.png",
+                "https://www.nicepng.com/png/detail/12-127971_ted-templeton-boss-baby-dad-from-boss-baby.png",
+                "https://www.pngarea.com/pngs/27/5611226_boss-baby-png-janice-templeton-boss-baby-transparent.png",
+                "https://i.pinimg.com/originals/df/74/3a/df743a43a7a0e892a71fd2294a11b43e.png"
+            ];
+
+            var curindex = 1;
+
+            function prev() {
+
+                curindex--;
+                document.getElementById("book").src = img_array[curindex];
+                console.log(img_array);
+            }
+
+            function next() {
+                curindex++;
+                document.getElementById("book").src = img_array[curindex];
+                console.log(img_array);
+            }
+            if (curindex = img_array.length) {
+                curindex = 0;
+            }
+        </script>
+    </center>
+
+</body>
+
+</html>
